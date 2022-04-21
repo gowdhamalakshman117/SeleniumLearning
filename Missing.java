@@ -5,14 +5,18 @@ public class Missing {
 	public static void main(String[] args) {
 
 		int[] a = {1,2,3,4,7,6,8};
+                Arrays.sort(a);
 
-		int n = a.length+1;
-		int sum = (n*(n+1))/2;
-		for (int i=0; i<a.length; i++) {
-
-			sum =sum-a[i];
+		
+		for (int i=a[0]; i<a.length; i++)
+                {
+                       if(i!=a[i-1])
+                       { 
+                        System.out.println(i);
+                        break;
+                       }
 		}
-		System.out.println(sum);
+		
 
 	}
 
